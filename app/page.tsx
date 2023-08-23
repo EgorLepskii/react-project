@@ -8,7 +8,7 @@ export default function Home() {
   return (
     <main className={styles.main}>
           <Card header={'Как работать с CSS Grid'}
-                description={<p><a href={'https://google.com'}>Грид-раскладка (CSS Grid Layout)</a> представляет собой двумерную систему сеток в CSS. Гриды подойдут и для верстки основных областей страницы..</p>}
+                description={<><a href={'https://google.com'}>Грид-раскладка (CSS Grid Layout)</a> представляет собой двумерную систему сеток в CSS. Гриды подойдут и для верстки основных областей страницы..</>}
                 likes={4}
                 time={'3 минуты'}
                 timeToRead={'1 месяц назад'}

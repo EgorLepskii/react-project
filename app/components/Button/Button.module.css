@@ -1,0 +1,47 @@
+.button {
+	flex-shrink: 0;
+
+	width: 148px;
+	height: 35px;
+
+	cursor: pointer;
+	text-align: center;
+	letter-spacing: 0;
+
+	border-radius: 5px;
+
+	font-size: 14px;
+	font-weight: 400;
+	line-height: 19px;
+}
+
+.primary {
+	color: #FFF;
+	border: none;
+	background: var(--primary);
+}
+
+.primary svg {
+	fill: var(--white);
+}
+
+.ghost {
+	color: var(--black);
+	border: 1px solid #EBEBEB;
+	background: var(--white);
+}
+
+.arrow {
+	display: inline-block;
+
+	margin-left: 11px;
+}
+
+.right{
+
+}
+
+.down {
+	transition: all 0.2s;
+	transform: rotate(90deg);
+}

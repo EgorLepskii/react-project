@@ -1,0 +1,18 @@
+.likes {
+	display: flex;
+
+	color: #6E6E6E;
+
+	font-size: 12px;
+	font-weight: 400;
+	font-style: normal;
+	line-height: normal;
+}
+
+.likes label {
+	margin-right: 6px;
+}
+
+.likes svg {
+	margin-top: -1px;
+}

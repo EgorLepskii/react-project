@@ -1,8 +1,15 @@
 import './globals.css';
 import type { Metadata } from 'next';
-import { Inter } from 'next/font/google';
+import {Noto_Sans,} from 'next/font/google';
 
-const inter = Inter({ subsets: ['latin'] });
+const notoSans = Noto_Sans({
+  variable: '--noto-sans-font',
+  weight: ['300', '400', '500', '700'],
+  style: ['normal'],
+  fallback: ['sans-serif'],
+  subsets: ['cyrillic', 'cyrillic-ext', 'latin', 'latin-ext'],
+  preload: true,
+});
 
 export const metadata: Metadata = {
   title: 'My Blog'
@@ -15,7 +22,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="ru">
-      <body className={inter.className}>{children}</body>
+      <body className={notoSans.className}>{children}</body>
     </html>
   );
 }

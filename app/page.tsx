@@ -1,12 +1,17 @@
+"use client";
 import styles from './page.module.css';
 import Button from "@/app/components/Button/Button";
 import P from "@/app/components/P/P";
 import Tag from "@/app/components/Tag/Tag";
 import Card from "@/app/components/Card/Card";
+import Rating from "@/app/components/Rating/Rating";
+import {useState} from "react";
 
 export default function Home() {
+    const [rating, setRating] = useState(4);
   return (
     <main className={styles.main}>
+        <Rating rating={rating} style={{width:"200px"}} isEditable setRating={setRating}/>
           <Card header={'Как работать с CSS Grid'}
                 description={<><a href={'https://google.com'}>Грид-раскладка (CSS Grid Layout)</a> представляет собой двумерную систему сеток в CSS. Гриды подойдут и для верстки основных областей страницы..</>}
                 likes={4}

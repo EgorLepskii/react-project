@@ -1,0 +1,8 @@
+.rating {
+    display: flex;
+    margin-left: 5px;
+    cursor: pointer;
+}
+.active {
+    fill: var(--primary);
+}

@@ -1,6 +1,9 @@
 import './globals.css';
 import type { Metadata } from 'next';
 import {Noto_Sans,} from 'next/font/google';
+import Header from "@/components/Header/Header";
+import NavBar from "@/components/NavBar/NavBar";
+import Footer from "@/components/Footer/Footer";
 
 const notoSans = Noto_Sans({
   variable: '--noto-sans-font',
@@ -23,12 +26,10 @@ export default function RootLayout({
   return (
     <html lang="ru">
       <body className={notoSans.className}>
-      <div>
-        <li>one</li>
-        <li>two</li>
-        <li>three</li>
-      </div>
+      <Header/>
+      <NavBar/>
       {children}
+      <Footer/>
       </body>
     </html>
   );

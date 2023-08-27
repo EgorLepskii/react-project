@@ -1,9 +1,9 @@
 import React from 'react';
 import styles from './Card.module.css';
 import cn from "classnames";
-import Likes from "@/app/components/Likes/Likes";
-import {CardProps} from "@/app/components/Card/Card.props";
-import Read from "@/app/components/Read/Read";
+import Likes from "@/components/Likes/Likes";
+import {CardProps} from "@/components/Card/Card.props";
+import Read from "@/components/Read/Read";
 
 const Card = ({header, description, timeToRead, time, likes, tag, imageLink}: CardProps) => {
     return (

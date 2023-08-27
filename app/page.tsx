@@ -1,6 +1,6 @@
 "use client";
 import styles from './page.module.css';
-import Like from "@/app/components/Like/Like";
+import Like from "@/components/Like/Like";
 import axios from "axios";
 
 export default function Home() {

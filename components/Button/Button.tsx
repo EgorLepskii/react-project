@@ -1,8 +1,8 @@
 import React from 'react';
-import {ButtonProps} from "@/app/components/Button/Button.props";
+import {ButtonProps} from "@/components/Button/Button.props";
 import styles from './Button.module.css';
 import cn from 'classnames';
-import Arrow from '../../../public/Vector.svg';
+import Arrow from '../../public/Vector.svg';
 const Button = ({children, appear, className, direction = 'none', ...props}: ButtonProps) => {
 
     return (

@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
-import LikeIcon from '../../../public/shape.svg';
+import LikeIcon from '../../public/shape.svg';
 import styles from './Like.module.css';
-import {LikeProps} from "@/app/components/Like/Like.props";
+import {LikeProps} from "@/components/Like/Like.props";
 import cn from "classnames";
 
 const Like = ({handleLikeChange}: LikeProps) => {

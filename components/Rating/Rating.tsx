@@ -1,7 +1,7 @@
 "use client";
 import React, {useEffect, useState} from 'react';
-import {RatingProps} from "@/app/components/Rating/Rating.props";
-import StarIcon from '../../../public/star.svg';
+import {RatingProps} from "@/components/Rating/Rating.props";
+import StarIcon from '../../public/star.svg';
 import cn from "classnames";
 import styles from './Rating.module.css';
 

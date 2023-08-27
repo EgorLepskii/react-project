@@ -1,5 +1,5 @@
 import React from 'react';
-import {PProps} from "@/app/components/P/P.props";
+import {PProps} from "@/components/P/P.props";
 import cn from "classnames";
 import stypes from './P.module.css';
 

@@ -22,7 +22,14 @@ export default function RootLayout({
 }) {
   return (
     <html lang="ru">
-      <body className={notoSans.className}>{children}</body>
+      <body className={notoSans.className}>
+      <div>
+        <li>one</li>
+        <li>two</li>
+        <li>three</li>
+      </div>
+      {children}
+      </body>
     </html>
   );
 }

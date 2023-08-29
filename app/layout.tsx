@@ -3,8 +3,7 @@ import type { Metadata } from 'next';
 import {Noto_Sans,} from 'next/font/google';
 
 const notoSans = Noto_Sans({
-  variable: '--noto-sans-font',
-  weight: ['300', '400', '500', '700'],
+  weight: ['400', '500', '700'],
   style: ['normal'],
   fallback: ['sans-serif'],
   subsets: ['cyrillic', 'cyrillic-ext', 'latin', 'latin-ext'],

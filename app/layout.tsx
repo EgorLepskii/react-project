@@ -8,6 +8,7 @@ const notoSans = Noto_Sans({
   fallback: ['sans-serif'],
   subsets: ['cyrillic', 'cyrillic-ext', 'latin', 'latin-ext'],
   preload: true,
+  variable: '--noto-sans-font'
 });
 
 export const metadata: Metadata = {
@@ -21,7 +22,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="ru">
-      <body className={notoSans.className}>{children}</body>
+      <body className={notoSans.variable}>{children}</body>
     </html>
   );
 }

@@ -2,9 +2,8 @@ import React from 'react';
 import {ButtonProps} from "@/app/components/Button/Button.props";
 import styles from './Button.module.css';
 import cn from 'classnames';
-import Arrow from '../../../public/Vector.svg';
 
-const Button = ({children, appear, className, direction = 'none', ...props}: ButtonProps) => {
+const Button = ({children, appear, className, direction = 'none',icon, ...props}: ButtonProps) => {
     const buttonClasses = cn(styles.button, className, {
         [styles.primary]: appear === 'primary',
         [styles.ghost]: appear === 'ghost'
@@ -26,7 +25,7 @@ const Button = ({children, appear, className, direction = 'none', ...props}: But
                 <label
                     className={labelClasses}
                 >
-                    <Arrow/>
+                    {icon}
                 </label>
             }
         </button>

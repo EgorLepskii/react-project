@@ -3,6 +3,8 @@ import Button from "@/app/components/Button/Button";
 import P from "@/app/components/P/P";
 import Tag from "@/app/components/Tag/Tag";
 import Card from "@/app/components/Card/Card";
+import Arrow from '../public/Vector.svg';
+
 
 export default function Home() {
   return (
@@ -16,10 +18,10 @@ export default function Home() {
                 imageLink={'/mini.png'}
 
           />
-        <Button appear={'ghost'} direction={'right'}>Читать отзывы</Button>
-        <Button appear={'primary'} direction={'right'}>Читать отзывы</Button>
-        <Button appear={'ghost'} direction={'down'}>Читать отзывы</Button>
-        <Button appear={'primary'} direction={'down'}>Читать отзывы</Button>
+        <Button appear={'ghost'} direction={'right'} icon={<Arrow/>}>Читать отзывы</Button>
+        <Button appear={'primary'} direction={'right'} icon={<Arrow/>}>Читать отзывы</Button>
+        <Button appear={'ghost'} direction={'down'} icon={<Arrow/>}>Читать отзывы</Button>
+        <Button appear={'primary'} direction={'down'} icon={<Arrow/>}>Читать отзывы</Button>
         <P size={'m'}>test</P>
         <P size={'l'}>test</P>
         <P size={'s'}>test</P>

@@ -43,9 +43,21 @@
 }
 
 .time {
-	margin-left: 4px;
-
 	color: #6E6E6E;
+}
+
+.time li {
+	margin-left: 8px;
+	padding-left: 2px;
+}
+
+.time li::marker {
+	content: '·';
+	color: #6E6E6E;
+	font-style: normal;
+	font-size: 12px;
+	line-height: normal;
+	font-weight: 400;
 }
 
 .header {

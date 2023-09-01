@@ -9,13 +9,13 @@ import Image from "next/image";
 const Card = ({header, description, timeToRead, time, likes, tag, imageLink, link}: CardProps) => {
     return (
         <article className={cn(styles.card)}>
-            <div className={cn(styles.media)}>
-                <Image
-                    src={imageLink}
-                    alt={'media'}
-                    fill={true}
-                />
-            </div>
+            <Image
+                src={imageLink}
+                alt={'media'}
+                layout='responsive'
+                width={200} height={300}
+                className={styles.media}
+            />
             <div className={cn(styles.info)}>
                 <div className={cn(styles.info__tag)}>
                     <p className={cn(styles.text)}>{tag}</p>

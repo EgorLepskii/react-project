@@ -1,0 +1,23 @@
+.footer {
+    background: #7653FC;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr auto auto;
+    gap: 10px 40px;
+    align-items: center;
+    min-height: 72px;
+    padding: 25px 32px;
+    color: #FFF;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+
+}
+
+@media (max-width: 765px) {
+    .footer {
+        grid-template-columns: 1fr;
+    }
+
+}

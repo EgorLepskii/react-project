@@ -31,10 +31,10 @@ const Card = ({header, description, timeToRead, time, likes, tag, imageLink, lin
             <div className={cn(styles.description)}>
                 <p>{description}</p>
             </div>
-            <div className={cn(styles.bottom)}>
+            <footer className={cn(styles.bottom)}>
                 <p className={cn(styles.bottomTime)}>{time}</p>
                 <Read text={'Читать'} link={link}/>
-            </div>
+            </footer>
         </article>
     );
 };

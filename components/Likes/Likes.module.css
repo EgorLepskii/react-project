@@ -9,10 +9,12 @@
 	line-height: normal;
 }
 
-.likes label {
+.likes span {
 	margin-right: 6px;
+	margin-top: 2px;
 }
 
-.likes svg {
-	margin-top: -1px;
+.btn {
+	border: none;
+	background: none;
 }

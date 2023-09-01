@@ -7,5 +7,6 @@ export interface CardProps {
     time: string,
     likes: number,
     tag: string,
-    imageLink: string
+    imageLink: string,
+    link: string
 }

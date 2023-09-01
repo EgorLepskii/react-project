@@ -4,18 +4,24 @@ import cn from "classnames";
 import Likes from "@/components/Likes/Likes";
 import {CardProps} from "@/components/Card/Card.props";
 import Read from "@/components/Read/Read";
+import Image from "next/image";
 
-const Card = ({header, description, timeToRead, time, likes, tag, imageLink}: CardProps) => {
+const Card = ({header, description, timeToRead, time, likes, tag, imageLink, link}: CardProps) => {
     return (
-        <div className={cn(styles.card)}>
-            <div className={cn(styles.media)}>
-                <img src={imageLink} alt={'media'}/>
-            </div>
+        <article className={cn(styles.card)}>
+            <Image
+                src={imageLink}
+                alt={'media'}
+                layout='responsive'
+                width={200} height={300}
+                className={styles.media}
+            />
             <div className={cn(styles.info)}>
                 <div className={cn(styles.info__tag)}>
                     <p className={cn(styles.text)}>{tag}</p>
-                    <p className={cn(styles.dot)}>·</p>
-                    <p className={cn(styles.time)}>{timeToRead}</p>
+                    <ul className={cn(styles.time)}>
+                        <li>{timeToRead}</li>
+                    </ul>
                 </div>
                 <Likes count={likes}/>
             </div>
@@ -25,11 +31,11 @@ const Card = ({header, description, timeToRead, time, likes, tag, imageLink}: Ca
             <div className={cn(styles.description)}>
                 <p>{description}</p>
             </div>
-            <div className={cn(styles.bottom)}>
+            <footer className={cn(styles.bottom)}>
                 <p className={cn(styles.bottomTime)}>{time}</p>
-                <Read text={'Читать'}/>
-            </div>
-        </div>
+                <Read text={'Читать'} link={link}/>
+            </footer>
+        </article>
     );
 };
 

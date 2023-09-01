@@ -1,3 +1,4 @@
 export interface ReadProps {
-    text: string
+    text: string,
+    link: string
 }

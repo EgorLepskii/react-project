@@ -13,7 +13,7 @@ body {
 	color: var(--black);
 	background: #F5F6F8;
 
-	font-family: sans-serif;
+	font-family: var(--noto-sans-font);
 }
 
 a {

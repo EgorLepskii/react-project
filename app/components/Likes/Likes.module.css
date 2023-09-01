@@ -9,6 +9,12 @@
 	line-height: normal;
 }
 
-.likes label {
+.likes span {
 	margin-right: 6px;
+	margin-top: 2px;
+}
+
+.btn {
+	border: none;
+	background: none;
 }

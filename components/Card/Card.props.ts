@@ -9,4 +9,5 @@ export interface CardProps {
     tag: string,
     imageLink: string,
     link: string
+    className: string
 }

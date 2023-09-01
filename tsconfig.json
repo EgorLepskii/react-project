@@ -26,7 +26,9 @@
     "paths": {
       "@/*": [
         "./*"
-      ]
+      ],
+      "@/components/*": ["app/components/*"],
+      "@/public/icons/*": ["public/icons/*"]
     }
   },
   "include": [

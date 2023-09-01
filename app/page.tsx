@@ -16,6 +16,7 @@ export default function Home() {
                 timeToRead='1 месяц назад'
                 tag='Front-End'
                 imageLink='/mini.png'
+                link={'https://google.com'}
 
           />
         <Button appear='ghost' direction='right' icon={<Arrow/>}>Читать отзывы</Button>

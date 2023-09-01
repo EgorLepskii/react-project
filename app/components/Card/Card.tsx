@@ -6,7 +6,7 @@ import {CardProps} from "@/app/components/Card/Card.props";
 import Read from "@/app/components/Read/Read";
 import Image from "next/image";
 
-const Card = ({header, description, timeToRead, time, likes, tag, imageLink}: CardProps) => {
+const Card = ({header, description, timeToRead, time, likes, tag, imageLink, link}: CardProps) => {
     return (
         <article className={cn(styles.card)}>
             <div className={cn(styles.media)}>
@@ -33,7 +33,7 @@ const Card = ({header, description, timeToRead, time, likes, tag, imageLink}: Ca
             </div>
             <div className={cn(styles.bottom)}>
                 <p className={cn(styles.bottomTime)}>{time}</p>
-                <Read text={'Читать'}/>
+                <Read text={'Читать'} link={link}/>
             </div>
         </article>
     );

@@ -3,7 +3,7 @@ import Button from "@/app/components/Button/Button";
 import P from "@/app/components/P/P";
 import Tag from "@/app/components/Tag/Tag";
 import Card from "@/app/components/Card/Card";
-import Arrow from '../public/Vector.svg';
+import Arrow from '../public/icons/Vector.svg';
 
 
 export default function Home() {

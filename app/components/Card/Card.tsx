@@ -8,7 +8,7 @@ import Image from "next/image";
 
 const Card = ({header, description, timeToRead, time, likes, tag, imageLink}: CardProps) => {
     return (
-        <div className={cn(styles.card)}>
+        <article className={cn(styles.card)}>
             <div className={cn(styles.media)}>
                 <Image
                     src={imageLink}
@@ -35,7 +35,7 @@ const Card = ({header, description, timeToRead, time, likes, tag, imageLink}: Ca
                 <p className={cn(styles.bottomTime)}>{time}</p>
                 <Read text={'Читать'}/>
             </div>
-        </div>
+        </article>
     );
 };
 

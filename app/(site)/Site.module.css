@@ -2,4 +2,6 @@
     padding-right: 43px;
     padding-left: 43px;
     margin-top: 8px;
+    height: 100vh;
+    overflow: scroll;
 }

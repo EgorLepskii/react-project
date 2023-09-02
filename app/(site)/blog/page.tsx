@@ -34,6 +34,7 @@ const Page = () => {
                   tag='Front-End'
                   imageLink='/mini.png'
                   link={''}
+                  id={'test'}
 
             />
             <Card header='Как работать с CSS Grid'

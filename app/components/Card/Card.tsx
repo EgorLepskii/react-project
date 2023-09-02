@@ -6,9 +6,9 @@ import {CardProps} from "@/components/Card/Card.props";
 import Read from "@/components/Read/Read";
 import Image from "next/image";
 
-const Card = ({header, description, timeToRead, time, likes, tag, imageLink, link}: CardProps) => {
+const Card = ({header, description, timeToRead, time, likes, tag, imageLink, link, className, ...props}: CardProps) => {
     return (
-        <article className={cn(styles.card)}>
+        <article {...props} className={cn(className, styles.card)}>
             <Image
                 src={imageLink}
                 alt={'media'}

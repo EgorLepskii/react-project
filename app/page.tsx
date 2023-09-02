@@ -17,7 +17,8 @@ export default function Home() {
                 tag='Front-End'
                 imageLink='/mini.png'
                 link={'https://google.com'}
-
+                className={'test'}
+                id={'test'}
           />
         <Button appear='ghost' direction='right' icon={<Arrow/>}>Читать отзывы</Button>
         <Button appear='primary' direction='right' icon={<Arrow/>}>Читать отзывы</Button>

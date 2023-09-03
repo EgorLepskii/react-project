@@ -25,10 +25,10 @@ const Card = ({header, description, timeToRead, time, likes, tag, imageLink, lin
                 <Likes count={likes}/>
             </div>
             <div className={cn(styles.header)}>
-                <p>{header}</p>
+                <span>{header}</span>
             </div>
             <div className={cn(styles.description)}>
-                <p>{description}</p>
+                <span>{description}</span>
             </div>
             <footer className={cn(styles.bottom)}>
                 <p className={cn(styles.bottomTime)}>{time}</p>

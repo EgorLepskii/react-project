@@ -87,7 +87,7 @@
 	line-height: 21px;
 }
 
-.description p {
+.description span {
 	display: -webkit-box;
 	overflow: hidden;
 

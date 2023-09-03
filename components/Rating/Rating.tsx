@@ -27,16 +27,16 @@ const Rating = ({rating, isEditable, setRating, className, ...props}: RatingProp
                              onKeyDown={(e: KeyboardEvent) => {
                                  onKeyDown(index, e);
                              }}
-            />
+            />;
         });
         setRatingArray(newArr);
-    }
+    };
 
     const onClick = (i: number) => {
         if (isEditable && setRating) {
             setRating(i + 1);
         }
-    }
+    };
 
     const onKeyDown = (i: number, e: KeyboardEvent) => {
         console.log(e);

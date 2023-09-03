@@ -1,7 +1,6 @@
 import React from 'react';
-import {NavBarProps} from "@/components/NavBar/NavBar.props";
 
-const NavBar = ({} : NavBarProps) => {
+const NavBar = () => {
     return (
         <div>
             NavBar

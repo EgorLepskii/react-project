@@ -18,7 +18,7 @@ const Card = ({header, description, timeToRead, time, likes, tag, imageLink, lin
             />
             <div className={cn(styles.info)}>
                 <div className={cn(styles.info__tag)}>
-                    <p className={cn(styles.text)}>{tag}</p>
+                    <span className={cn(styles.text)}>{tag}</span>
                     <ul className={cn(styles.time)}>
                         <li>{timeToRead}</li>
                     </ul>

@@ -11,9 +11,7 @@ const P = ({size = 'm', children, className, ...props}: PProps) => {
         });
 
     return (
-        <p {...props}
-           className={pClasses}
-        >
+        <p {...props} className={pClasses}>
             {children}
         </p>
     );

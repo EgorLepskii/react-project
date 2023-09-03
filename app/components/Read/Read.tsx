@@ -1,4 +1,3 @@
-import React from 'react';
 import {ReadProps} from "@/components/Read/Read.props";
 import ReadArrow from '@/public/icons/arrow.svg';
 import styles from './Read.module.css';

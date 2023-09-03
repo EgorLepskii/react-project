@@ -1,4 +1,3 @@
-import React from 'react';
 import {PProps} from "@/components/P/P.props";
 import cn from "classnames";
 import styles from './P.module.css';

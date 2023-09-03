@@ -1,4 +1,3 @@
-import React from 'react';
 import {TagProps} from "@/components/Tag/Tag.props";
 import styles from './Tag.module.css';
 import cn from "classnames";

@@ -1,4 +1,3 @@
-import React from 'react';
 import styles from './Card.module.css';
 import cn from "classnames";
 import Likes from "@/components/Likes/Likes";

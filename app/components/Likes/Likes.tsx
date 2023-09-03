@@ -1,4 +1,3 @@
-import React from 'react';
 import {LikesProps} from "@/components/Likes/Likes.props";
 import styles from './Likes.module.css';
 import cn from "classnames";

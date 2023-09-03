@@ -41,14 +41,12 @@
 
 .time {
 	color: var(--gray);
-}
-
-.time li {
 	margin-left: 8px;
 	padding-left: 2px;
+	display: list-item;
 }
 
-.time li::marker {
+.time::marker {
 	content: '·';
 	color: var(--gray);
 	font-style: normal;

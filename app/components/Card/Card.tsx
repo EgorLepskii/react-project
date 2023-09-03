@@ -31,7 +31,7 @@ const Card = ({header, description, timeToRead, time, likes, tag, imageLink, lin
                 <span>{description}</span>
             </div>
             <footer className={cn(styles.bottom)}>
-                <p className={cn(styles.bottomTime)}>{time}</p>
+                <span className={cn(styles.bottomTime)}>{time}</span>
                 <Read text={'Читать'} link={link}/>
             </footer>
         </article>

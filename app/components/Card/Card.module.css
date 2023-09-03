@@ -36,11 +36,11 @@
 .dot {
 	margin-left: 6px;
 
-	color: #6E6E6E;
+	color: var(--gray);
 }
 
 .time {
-	color: #6E6E6E;
+	color: var(--gray);
 }
 
 .time li {
@@ -50,7 +50,7 @@
 
 .time li::marker {
 	content: '·';
-	color: #6E6E6E;
+	color: var(--gray);
 	font-style: normal;
 	font-size: 12px;
 	line-height: normal;
@@ -79,7 +79,7 @@
 
 	text-overflow: ellipsis;
 
-	color:  #6E6E6E;
+	color:  var(--gray);
 
 	font-size: 14px;
 	font-weight: 400;
@@ -111,7 +111,7 @@
 }
 
 .bottomTime {
-	color: #6E6E6E;
+	color: var(--gray);
 
 	font-weight: 400;
 	font-style: normal;

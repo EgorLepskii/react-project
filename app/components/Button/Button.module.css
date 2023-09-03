@@ -37,10 +37,6 @@
 	margin-left: 11px;
 }
 
-.right{
-
-}
-
 .down {
 	transition: all 0.2s;
 	transform: rotate(90deg);

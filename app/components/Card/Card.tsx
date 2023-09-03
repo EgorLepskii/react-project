@@ -28,7 +28,7 @@ const Card = ({header, description, timeToRead, time, likes, tag, imageLink, lin
                 <span>{header}</span>
             </div>
             <div className={cn(styles.description)}>
-                <span>{description}</span>
+                <p>{description}</p>
             </div>
             <footer className={cn(styles.bottom)}>
                 <span className={cn(styles.bottomTime)}>{time}</span>

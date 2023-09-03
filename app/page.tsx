@@ -16,7 +16,7 @@ export default function Home() {
                 timeToRead='1 месяц назад'
                 tag='Front-End'
                 imageLink='/mini.png'
-                link={'https://google.com'}
+                postId={1}
                 className={'test'}
                 id={'test'}
           />

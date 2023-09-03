@@ -5,7 +5,7 @@ import {CardProps} from "@/components/Card/Card.props";
 import Read from "@/components/Read/Read";
 import Image from "next/image";
 
-const Card = ({header, description, timeToRead, time, likes, tag, imageLink, link, className, ...props}: CardProps) => {
+const Card = ({header, description, timeToRead, time, likes, tag, imageLink, postId, className, ...props}: CardProps) => {
     return (
         <article {...props} className={cn(className, styles.card)}>
             <Image
@@ -30,7 +30,7 @@ const Card = ({header, description, timeToRead, time, likes, tag, imageLink, lin
             </div>
             <footer className={cn(styles.bottom)}>
                 <span className={cn(styles.bottomTime)}>{time}</span>
-                <Read text={'Читать'} link={link}/>
+                <Read text={'Читать'} id={postId}/>
             </footer>
         </article>
     );

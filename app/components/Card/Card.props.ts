@@ -8,5 +8,5 @@ export interface CardProps extends DetailedHTMLProps<HTMLAttributes<HTMLElement>
     likes: number,
     tag: string,
     imageLink: string,
-    link: string
+    postId: number
 }

@@ -7,7 +7,7 @@ const Read = ({text, link}: ReadProps) => {
     return (
         <Link href={link}>
             <div className={styles.read}>
-                <p>{text}</p>
+                <span>{text}</span>
                 <ReadArrow/>
             </div>
         </Link>

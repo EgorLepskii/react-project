@@ -5,11 +5,9 @@ import Like from '@/public/icons/like.svg';
 
 const Likes = ({count}: LikesProps) => {
     return (
-        <button className={cn(styles.btn)}>
-            <div className={cn(styles.likes)}>
-                <span>{count}</span>
-                <Like/>
-            </div>
+        <button className={cn(styles.likes)}>
+            <span>{count}</span>
+            <Like/>
         </button>
     );
 };

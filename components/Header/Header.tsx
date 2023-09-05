@@ -5,15 +5,16 @@ import styles from './Header.module.css';
 import cn from "classnames";
 import Icon from '../../public/github.svg';
 import {Context} from "@/context/app.context";
+import Link from "next/link";
 
 const Header = ({...props}: HeaderProps) => {
     const context = useContext(Context);
     return (
         <div {...props} className={cn(styles.header)}>
             <p>.my_blog</p>
-            <a href={context.link}>
+            <Link href={context.link ?? ''}>
                 <Icon/>
-            </a>
+            </Link>
         </div>
     );
 };

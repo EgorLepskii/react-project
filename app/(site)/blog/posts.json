@@ -1,0 +1,35 @@
+[
+  {
+    "header": "Как работать с CSS Grid",
+    "description": "&lt;a href=&quot;https://google.com&quot;&gt;Грид-раскладка (CSS Grid Layout)&lt;/a&gt; представляет собой двумерную систему сеток в CSS. Гриды подойдут и для верстки основных областей страницы..",
+    "likes": 4,
+    "time": "3 минуты",
+    "timeToRead": "1 месяц назад",
+    "tag": "Front-End",
+    "imageLink": "/mini.png",
+    "link": "https://google.com",
+    "postId": 1
+  },
+  {
+    "header": "Как работать с CSS Grid 3",
+    "description": "&lt;a href=&quot;https://google.com&quot;&gt;Грид-раскладка (CSS Grid Layout)&lt;/a&gt; представляет собой двумерную систему сеток в CSS. Гриды подойдут и для верстки основных областей страницы..",
+    "likes": 5,
+    "time": "2 минуты",
+    "timeToRead": "1 месяц назад",
+    "tag": "Front-End",
+    "imageLink": "/mini.png",
+    "link": "https://google.com",
+    "postId": 2
+  },
+  {
+    "header": "Как работать с CSS Grid 3",
+    "description": "&lt;a href=&quot;https://google.com&quot;&gt;Грид-раскладка (CSS Grid Layout)&lt;/a&gt; представляет собой двумерную систему сеток в CSS. Гриды подойдут и для верстки основных областей страницы..",
+    "likes": 4,
+    "time": "3 минуты",
+    "timeToRead": "1 месяц назад",
+    "tag": "Front-End",
+    "imageLink": "/mini.png",
+    "link": "https://google.com",
+    "postId": 3
+  }
+]

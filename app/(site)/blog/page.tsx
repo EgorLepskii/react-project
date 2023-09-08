@@ -1,66 +1,24 @@
 import Card from "@/components/Card/Card";
 import styles from './Page.module.css';
 import cn from "classnames";
+import posts from './posts.json';
 
 const Page = () => {
+
     return (
         <div className={cn(styles.page)}>
-            <Card header='Как работать с CSS Grid'
-                  description={<><a href='https://google.com'>Грид-раскладка (CSS Grid Layout)</a> представляет собой двумерную систему сеток в CSS. Гриды подойдут и для верстки основных областей страницы..</>}
-                  likes={4}
-                  time='3 минуты'
-                  timeToRead='1 месяц назад'
-                  tag='Front-End'
-                  imageLink='/mini.png'
-                  link={''}
-                  postId={1}
-
-            />
-            <Card header='Как работать с CSS Grid'
-                  description={<><a href='https://google.com'>Грид-раскладка (CSS Grid Layout)</a> представляет собой двумерную систему сеток в CSS. Гриды подойдут и для верстки основных областей страницы..</>}
-                  likes={4}
-                  time='3 минуты'
-                  timeToRead='1 месяц назад'
-                  tag='Front-End'
-                  imageLink='/mini.png'
-                  link={''}
-                  postId={1}
-
-            />
-            <Card header='Как работать с CSS Grid'
-                  description={<><a href='https://google.com'>Грид-раскладка (CSS Grid Layout)</a> представляет собой двумерную систему сеток в CSS. Гриды подойдут и для верстки основных областей страницы..</>}
-                  likes={4}
-                  time='3 минуты'
-                  timeToRead='1 месяц назад'
-                  tag='Front-End'
-                  imageLink='/mini.png'
-                  link={''}
-                  id={'test'}
-                  postId={1}
-
-            />
-            <Card header='Как работать с CSS Grid'
-                  description={<><a href='https://google.com'>Грид-раскладка (CSS Grid Layout)</a> представляет собой двумерную систему сеток в CSS. Гриды подойдут и для верстки основных областей страницы..</>}
-                  likes={4}
-                  time='3 минуты'
-                  timeToRead='1 месяц назад'
-                  tag='Front-End'
-                  imageLink='/mini.png'
-                  link={''}
-                  postId={1}
-
-            />
-            <Card header='Как работать с CSS Grid'
-                  description={<><a href='https://google.com'>Грид-раскладка (CSS Grid Layout)</a> представляет собой двумерную систему сеток в CSS. Гриды подойдут и для верстки основных областей страницы..</>}
-                  likes={4}
-                  time='3 минуты'
-                  timeToRead='1 месяц назад'
-                  tag='Front-End'
-                  imageLink='/mini.png'
-                  link={''}
-                  postId={1}
-
-            />
+            {posts.map((post) => {
+                return <Card header={post.header}
+                             description={post.description}
+                             likes={post.likes}
+                             time={post.time}
+                             timeToRead={post.timeToRead}
+                             tag={post.tag}
+                             imageLink={post.imageLink}
+                             link={post.link}
+                             postId={post.postId}
+                />;
+            })}
         </div>
     );
 };

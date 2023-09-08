@@ -1,7 +1,10 @@
 import styles from './layout.module.css';
 import cn from "classnames";
 
-export default function AuthLayout({children}: { children: React.ReactNode }) {
+interface Props {
+    children:  React.ReactNode
+}
+export default function AuthLayout({children}: Props) {
     return (
         <div className={cn(styles.layout)}>
             <p>site layout</p>

@@ -16,8 +16,10 @@ const notoSans = Noto_Sans({
 export const metadata: Metadata = {
     title: 'Мой блог'
 };
-
-export default function RootLayout({children}: { children: React.ReactNode }) {
+interface Props {
+    children: React.ReactNode
+}
+export default function RootLayout({children}: Props) {
     return (
         <html lang="ru">
         <body className={notoSans.className}>

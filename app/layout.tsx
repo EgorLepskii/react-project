@@ -22,7 +22,7 @@ interface Props {
 export default function RootLayout({children}: Props) {
     return (
         <html lang="ru">
-        <body className={notoSans.className}>
+        <body className={notoSans.variable}>
         <Header/>
         {children}
         <Footer/>

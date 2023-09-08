@@ -15,17 +15,19 @@ const notoSans = Noto_Sans({
 export const metadata: Metadata = {
     title: 'Мой блог'
 };
+
 interface Props {
     children: React.ReactNode
 }
+
 export default function RootLayout({children}: Props) {
     return (
         <html lang="ru">
-        <body className={notoSans.variable}>
-        <Header/>
-        {children}
-        <Footer/>
-        </body>
+          <body className={notoSans.variable}>
+            <Header/>
+            {children}
+            <Footer/>
+          </body>
         </html>
     );
 }

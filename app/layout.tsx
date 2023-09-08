@@ -14,7 +14,7 @@ const notoSans = Noto_Sans({
 });
 
 export const metadata: Metadata = {
-    title: 'My Blog'
+    title: 'Мой блог'
 };
 
 export default function RootLayout({

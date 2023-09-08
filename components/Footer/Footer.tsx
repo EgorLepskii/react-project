@@ -1,4 +1,3 @@
-import React from 'react';
 import {FooterProps} from "@/components/Footer/Footer.props";
 import styles from './Footer.module.css';
 

@@ -1,4 +1,3 @@
-import React from "react";
 import styles from './Site.module.css';
 import cn from "classnames";
 interface Props {

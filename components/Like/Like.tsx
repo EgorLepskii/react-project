@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import {useState} from 'react';
 import LikeIcon from '../../public/shape.svg';
 import styles from './Like.module.css';
 import {LikeProps} from "@/components/Like/Like.props";

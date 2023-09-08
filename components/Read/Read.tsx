@@ -5,11 +5,9 @@ import Link from "next/link";
 
 const Read = ({text, id}: ReadProps) => {
     return (
-        <Link href={`https://jsonplaceholder.typicode.com/posts/${id}`}>
-            <div className={styles.read}>
-                <span>{text}</span>
-                <ReadArrow/>
-            </div>
+        <Link href={`https://jsonplaceholder.typicode.com/posts/${id}`} className={styles.read}>
+            <span>{text}</span>
+            <ReadArrow/>
         </Link>
     );
 };

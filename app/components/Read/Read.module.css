@@ -1,0 +1,7 @@
+.read {
+	display: flex;
+
+	color: var(--blue);
+
+	font-size: 12px;
+}

@@ -14,6 +14,7 @@ const Page = () => {
                   tag='Front-End'
                   imageLink='/mini.png'
                   link={''}
+                  postId={1}
 
             />
             <Card header='Как работать с CSS Grid'
@@ -24,6 +25,7 @@ const Page = () => {
                   tag='Front-End'
                   imageLink='/mini.png'
                   link={''}
+                  postId={1}
 
             />
             <Card header='Как работать с CSS Grid'
@@ -35,6 +37,7 @@ const Page = () => {
                   imageLink='/mini.png'
                   link={''}
                   id={'test'}
+                  postId={1}
 
             />
             <Card header='Как работать с CSS Grid'
@@ -45,6 +48,7 @@ const Page = () => {
                   tag='Front-End'
                   imageLink='/mini.png'
                   link={''}
+                  postId={1}
 
             />
             <Card header='Как работать с CSS Grid'
@@ -55,6 +59,7 @@ const Page = () => {
                   tag='Front-End'
                   imageLink='/mini.png'
                   link={''}
+                  postId={1}
 
             />
         </div>

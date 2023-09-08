@@ -16,7 +16,7 @@
 }
 
 .primary {
-	color: #FFF;
+	color: var(--white);
 	border: none;
 	background: var(--primary);
 }
@@ -35,10 +35,6 @@
 	display: inline-block;
 
 	margin-left: 11px;
-}
-
-.right{
-
 }
 
 .down {

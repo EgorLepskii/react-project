@@ -1,7 +1,7 @@
 .read {
 	display: flex;
 
-	color: #1473E6;
+	color: var(--blue);
 
 	font-size: 12px;
 }

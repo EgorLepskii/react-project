@@ -4,8 +4,7 @@
 
 	border: 1px solid #F5F5F5;
 	border-radius: 5px;
-	background: #FFF;
-	height: 420px;
+	background: var(--white);
 }
 
 .media {
@@ -37,25 +36,27 @@
 .dot {
 	margin-left: 6px;
 
-	color: #6E6E6E;
+	color: var(--gray);
 }
 
 .time {
-	color: #6E6E6E;
-}
+	display: list-item;
 
-.time li {
 	margin-left: 8px;
 	padding-left: 2px;
+
+	color: var(--gray);
 }
 
-.time li::marker {
+.time::marker {
 	content: '·';
-	color: #6E6E6E;
-	font-style: normal;
+
+	color: var(--gray);
+
 	font-size: 12px;
-	line-height: normal;
 	font-weight: 400;
+	font-style: normal;
+	line-height: normal;
 }
 
 .header {
@@ -80,7 +81,7 @@
 
 	text-overflow: ellipsis;
 
-	color:  #6E6E6E;
+	color:  var(--gray);
 
 	font-size: 14px;
 	font-weight: 400;
@@ -112,7 +113,7 @@
 }
 
 .bottomTime {
-	color: #6E6E6E;
+	color: var(--gray);
 
 	font-weight: 400;
 	font-style: normal;

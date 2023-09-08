@@ -9,5 +9,6 @@ export interface CardProps extends DetailedHTMLProps<HTMLAttributes<HTMLElement>
     tag: string,
     imageLink: string,
     link: string
+    postId: number
     className?: string
 }

@@ -1,7 +1,7 @@
 .button {
 	flex-shrink: 0;
 
-	width: 148px;
+	min-width: 148px;
 	height: 35px;
 
 	cursor: pointer;

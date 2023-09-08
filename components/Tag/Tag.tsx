@@ -1,9 +1,10 @@
 import {TagProps} from "@/components/Tag/Tag.props";
 import styles from './Tag.module.css';
 import cn from "classnames";
+import Link from "next/link";
 
-const Tag = ({appear = 'ghost', size, children, className, href, ...props}: TagProps) => {
-    const classes = cn(styles.tag, className,
+const Tag = ({appear = 'ghost', size, children, href, ...props}: TagProps) => {
+    const classes = cn(styles.tag,
         {
             [styles.ghost]: appear === 'ghost',
             [styles.red]: appear === 'red',
@@ -15,13 +16,13 @@ const Tag = ({appear = 'ghost', size, children, className, href, ...props}: TagP
 
     return (
 
-        <a
+        <Link
             {...props}
-            href={href}
+            href={href ?? ''}
             className={classes}
         >
             {children}
-        </a>
+        </Link>
     );
 };
 

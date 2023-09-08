@@ -6,7 +6,7 @@ import Icon from '../../public/github.svg';
 const Header = ({...props}: HeaderProps) => {
     return (
         <div {...props} className={cn(styles.header)}>
-            <p>.my_blog</p>
+            <span>.my_blog</span>
             <Icon/>
         </div>
     );

@@ -7,7 +7,7 @@ interface Props {
 export default function AuthLayout({children}: Props) {
     return (
         <div className={cn(styles.layout)}>
-            <p>site layout</p>
+            <span>site layout</span>
             {children}
         </div>
     );

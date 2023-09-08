@@ -1,4 +1,5 @@
-import React from "react";
+import styles from './layout.module.css';
+import cn from "classnames";
 
 export default function AuthLayout({
                                        children,
@@ -6,7 +7,7 @@ export default function AuthLayout({
     children: React.ReactNode
 }) {
     return (
-        <div style={{border: "1px solid red"}}>
+        <div className={cn(styles.layout)}>
             <p>site layout</p>
             {children}
         </div>

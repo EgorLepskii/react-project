@@ -33,12 +33,6 @@
 	color: #4B4B4B;
 }
 
-.dot {
-	margin-left: 6px;
-
-	color: var(--gray);
-}
-
 .time {
 	display: list-item;
 

@@ -10,7 +10,7 @@ const Card = ({header, description, timeToRead, time, likes, tag, imageLink, pos
         <article {...props} className={cn(className, styles.card)}>
             <Image
                 src={imageLink}
-                alt={'media'}
+                alt='media'
                 layout='responsive'
                 width={200} height={300}
                 className={styles.media}
@@ -30,7 +30,7 @@ const Card = ({header, description, timeToRead, time, likes, tag, imageLink, pos
             </div>
             <footer className={cn(styles.bottom)}>
                 <span className={cn(styles.bottomTime)}>{time}</span>
-                <Read text={'Читать'} id={postId}/>
+                <Read text='Читать' id={postId}/>
             </footer>
         </article>
     );

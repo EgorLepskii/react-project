@@ -7,7 +7,6 @@ import Footer from "@/components/Footer/Footer";
 const notoSans = Noto_Sans({
     weight: ['400', '500', '700'],
     style: ['normal'],
-    fallback: ['sans-serif'],
     subsets: ['cyrillic', 'cyrillic-ext', 'latin', 'latin-ext'],
     preload: true,
     variable: '--noto-sans-font'

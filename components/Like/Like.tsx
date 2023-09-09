@@ -14,13 +14,14 @@ const Like = () => {
     };
 
     return (
-        <div className={cn(styles.like, {[styles.active]: active, [styles.notActive]: !active})}
-             onClick={() => {
-                 setActive(!active);
-                 sendRequest();
-             }}>
+        <button className={cn(styles.like, {[styles.active]: active, [styles.notActive]: !active})}
+                onClick={() => {
+                    setActive(!active);
+                    sendRequest();
+                }}
+        >
             <LikeIcon/>
-        </div>
+        </button>
     );
 };
 

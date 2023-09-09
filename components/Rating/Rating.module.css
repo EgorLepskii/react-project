@@ -3,6 +3,11 @@
     margin-left: 5px;
     cursor: pointer;
 }
-.active {
+.active svg{
     fill: var(--primary);
+}
+
+.rating button {
+    border: none;
+    background: none;
 }

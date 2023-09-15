@@ -5,7 +5,7 @@ import styles from './Like.module.css';
 import cn from "classnames";
 import axios from "axios";
 
-const Like = () => {
+const LikeButton = () => {
     const [active, setActive] = useState<boolean>(false);
     const sendRequest = () => {
         axios.patch('https://jsonplaceholder.typicode.com/posts/1').then((response) => {
@@ -25,4 +25,4 @@ const Like = () => {
     );
 };
 
-export default Like;
+export default LikeButton;

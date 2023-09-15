@@ -1,10 +1,10 @@
 import styles from './page.module.css';
-import Like from "@/components/Like/Like";
+import LikeCountButton from "@/components/Likes/LikeCountButton";
 
 export default function Home() {
     return (
         <main className={styles.main}>
-            <Like/>
+            <LikeCountButton count={4}/>
         </main>
     );
 }

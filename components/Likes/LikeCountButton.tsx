@@ -1,15 +1,15 @@
 import {LikesProps} from "@/components/Likes/Likes.props";
 import styles from './Likes.module.css';
 import cn from "classnames";
-import Like from '@/public/icons/like.svg';
+import LikeIcon from '@/public/icons/like.svg';
 
-const Likes = ({count}: LikesProps) => {
+const LikeCountButton = ({count}: LikesProps) => {
     return (
         <button className={cn(styles.likes)}>
             <span>{count}</span>
-            <Like/>
+            <LikeIcon/>
         </button>
     );
 };
 
-export default Likes;
+export default LikeCountButton;

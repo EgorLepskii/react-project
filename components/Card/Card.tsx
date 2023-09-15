@@ -1,6 +1,6 @@
 import styles from './Card.module.css';
 import cn from "classnames";
-import Likes from "@/components/Likes/Likes";
+import LikeCountButton from "@/components/Likes/LikeCountButton";
 import {CardProps} from "@/components/Card/Card.props";
 import Read from "@/components/Read/Read";
 import Image from "next/image";
@@ -40,7 +40,7 @@ const Card = ({
                     <span className={cn(styles.text)}>{tag}</span>
                     <span className={cn(styles.time)}>{timeToRead}</span>
                 </div>
-                <Likes count={likes}/>
+                <LikeCountButton count={likes}/>
             </div>
             <div className={cn(styles.header)}>
                 <span>{header}</span>

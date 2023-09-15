@@ -1,0 +1,16 @@
+.svg {
+    transform: rotate(90deg);
+}
+
+.page {
+    height: 100vh;
+}
+
+.button{
+    background: var(--primary);
+    color: var(--white);
+}
+
+.svg svg{
+    fill: var(--white);
+}

@@ -1,6 +1,6 @@
 .button {
-	flex-shrink: 0;
-
+	display: flex;
+	align-items: center;
 	min-width: 148px;
 	height: 35px;
 
@@ -13,30 +13,15 @@
 	font-size: 14px;
 	font-weight: 400;
 	line-height: 19px;
-}
-
-.primary {
-	color: var(--white);
 	border: none;
-	background: var(--primary);
 }
 
-.primary svg {
-	fill: var(--white);
+.text{
+	flex: 1;
+	text-align: center;
+	margin-left: 18px;
 }
 
-.ghost {
-	color: var(--black);
-	border: 1px solid var(--dark-white);
-	background: var(--white);
-}
-
-.arrow {
-	display: inline-block;
-
-	margin-left: 11px;
-}
-
-.down {
-	transform: rotate(90deg);
+.icon {
+	margin-right: 18px;
 }

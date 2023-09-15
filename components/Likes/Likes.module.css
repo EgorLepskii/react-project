@@ -1,7 +1,7 @@
 .likes {
 	display: flex;
 
-	color: #6E6E6E;
+	color: var(--grey);
 	border: none;
 	background: none;
 

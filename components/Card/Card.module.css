@@ -2,7 +2,7 @@
 	width: 350px;
 	padding: 10px;
 
-	border: 1px solid #F5F5F5;
+	border: 1px solid var(--grey-100);
 	border-radius: 5px;
 	background: var(--white);
 }
@@ -11,7 +11,7 @@
 	position: relative;
 	border-radius: 5px;
 	height: 200px;
-	background: #E5F4FF;
+	background: var(--grey-200);
 }
 
 .info {
@@ -32,7 +32,7 @@
 }
 
 .text {
-	color: #4B4B4B;
+	color: var(--grey-800);
 }
 
 .time {
@@ -41,13 +41,13 @@
 	margin-left: 8px;
 	padding-left: 2px;
 
-	color: var(--gray);
+	color: var(--grey);
 }
 
 .time::marker {
 	content: '·';
 
-	color: var(--gray);
+	color: var(--grey);
 
 	font-size: 12px;
 	font-weight: 400;
@@ -62,7 +62,7 @@
 
 	margin-top: 5px;
 
-	color: #2C2C2C;
+	color: var(--grey-900);
 
 	font-size: 18px;
 	font-weight: 700;
@@ -77,7 +77,7 @@
 
 	text-overflow: ellipsis;
 
-	color:  var(--gray);
+	color:  var(--grey);
 
 	font-size: 14px;
 	font-weight: 400;
@@ -109,7 +109,7 @@
 }
 
 .bottomTime {
-	color: var(--gray);
+	color: var(--grey);
 
 	font-weight: 400;
 	font-style: normal;

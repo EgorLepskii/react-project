@@ -1,5 +1,5 @@
 .footer {
-    background: #7653FC;
+    background: var(--primary);
     width: 100%;
     display: grid;
     grid-template-columns: 1fr auto auto;
@@ -7,7 +7,7 @@
     align-items: center;
     min-height: 72px;
     padding: 25px 32px;
-    color: #FFF;
+    color: var(--white);
     font-size: 12px;
     font-style: normal;
     font-weight: 500;

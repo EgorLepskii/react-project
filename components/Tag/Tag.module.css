@@ -20,7 +20,7 @@
 
 .ghost {
 	color: var(--white);
-	background: #B3C0D9;
+	background: var(--grey-250);
 
 	font-weight: 600;
 }
@@ -34,7 +34,7 @@
 
 .red {
 	color: var(--white);
-	background: #DE0000;
+	background: var(--red-900);
 
 	font-weight: 600;
 }

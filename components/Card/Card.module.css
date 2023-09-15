@@ -8,7 +8,9 @@
 }
 
 .media {
+	position: relative;
 	border-radius: 5px;
+	height: 200px;
 	background: #E5F4FF;
 }
 

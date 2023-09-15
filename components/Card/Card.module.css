@@ -9,8 +9,10 @@
 
 .media {
 	position: relative;
-	border-radius: 5px;
+
 	height: 200px;
+
+	border-radius: 5px;
 	background: var(--grey-200);
 }
 

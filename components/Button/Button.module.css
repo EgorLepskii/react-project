@@ -1,6 +1,7 @@
 .button {
 	display: flex;
 	align-items: center;
+
 	min-width: 148px;
 	height: 35px;
 
@@ -8,18 +9,21 @@
 	text-align: center;
 	letter-spacing: 0;
 
+	border: none;
+
 	border-radius: 5px;
 
 	font-size: 14px;
 	font-weight: 400;
 	line-height: 19px;
-	border: none;
 }
 
 .text{
 	flex: 1;
-	text-align: center;
+
 	margin-left: 18px;
+
+	text-align: center;
 }
 
 .icon {

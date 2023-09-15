@@ -4,6 +4,8 @@ import Likes from "@/components/Likes/Likes";
 import {CardProps} from "@/components/Card/Card.props";
 import Read from "@/components/Read/Read";
 import Image from "next/image";
+import DOMPurify from 'isomorphic-dompurify';
+
 
 const Card = ({
                   header,
@@ -17,6 +19,10 @@ const Card = ({
                   className,
                   ...props
               }: CardProps) => {
+    const clean = DOMPurify.sanitize(description, {
+        ALLOWED_TAGS: ['a']
+    });
+
     return (
         <article {...props} className={cn(className, styles.card)}>
             <div className={styles.media}>
@@ -40,7 +46,7 @@ const Card = ({
                 <span>{header}</span>
             </div>
             <div className={cn(styles.description)}>
-                <p>{description}</p>
+                <p dangerouslySetInnerHTML={{__html: clean}}/>
             </div>
             <footer className={cn(styles.bottom)}>
                 <span className={cn(styles.bottomTime)}>{time}</span>

@@ -1,0 +1,53 @@
+.closed {
+    display: none;
+}
+
+.active {
+    color: var(--primary);
+}
+
+.active svg {
+    fill: var(--primary);
+}
+
+.menu {
+    font-style: normal;
+    line-height: normal;
+}
+
+.firstLevelMenu {
+    font-size: 18px;
+
+    font-weight: 500;
+}
+
+
+.firstLevelMenuItem {
+    margin-top: 10px;
+}
+
+.menuHeaderText {
+    margin-left: 10px;
+}
+
+.secondLevelMenu {
+    font-size: 12px;
+    font-weight: 300;
+    color: #787D85;
+    padding: 5px;
+    margin-top: 10px;
+    margin-left: 20px;
+    border-left: 1px solid #DFDFDF;
+}
+
+.secondLevelMenuItem {
+    margin-top: 10px;
+    margin-left: 30px;
+}
+
+.thirdLevelMenu {
+    color: #787D85;
+    font-size: 14px;
+    font-weight: 500;
+
+}

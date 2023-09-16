@@ -3,9 +3,26 @@ import {SidebarProps} from "@/components/Sidebar/Sidebar.props";
 import {FirstLevelMenu, Page} from "@/interfaces/menu.interface";
 import cn from "classnames";
 import styles from "./Sidebar.module.css";
-import menu from "@/components/Menu/Menu";
+import Link from "next/link";
+import {usePathname} from 'next/navigation';
+import {useState} from "react";
 
 const Sidebar = ({data, firstLevelMenu, selectedCategory}: SidebarProps) => {
+    const pathname = usePathname();
+    const path = pathname.split('/').pop();
+    const [menu, setMenu] = useState(data);
+
+    const setSecondLevelMenu = (secondCategory: string) => {
+        setMenu(menu.map((datum) => {
+            if (datum._id.secondCategory === secondCategory) {
+                datum.isOpened = !datum.isOpened;
+            } else  {
+                datum.isOpened = false;
+            }
+            return datum;
+        }));
+    };
+
     const buildFirstLevel = () => {
         return (
             <div className={cn(styles.firstLevelMenu)}>
@@ -13,8 +30,8 @@ const Sidebar = ({data, firstLevelMenu, selectedCategory}: SidebarProps) => {
                     const isActive = selectedCategory === menu.id;
                     return <div className={cn(styles.firstLevelMenuItem, {[styles.active]: isActive})}>
                         <span>{menu.icon}</span>
-                        <span
-                            className={cn(styles.menuHeaderText, {[styles.active]: isActive})}>{menu.title}</span>
+                        <Link href={`/product/${menu.route}`}
+                              className={cn(styles.menuHeaderText, {[styles.active]: isActive})}>{menu.title}</Link>
                         <div>
                             {buildSecondLevel(menu)}
                         </div>
@@ -24,14 +41,15 @@ const Sidebar = ({data, firstLevelMenu, selectedCategory}: SidebarProps) => {
         );
     };
 
-    const buildSecondLevel = (menu: FirstLevelMenu) => {
+    const buildSecondLevel = (secondMenu: FirstLevelMenu) => {
         return (
-            <div className={cn(styles.secondLevelMenu, {[styles.closed]: selectedCategory !== menu.id})}>
-                {data.map((item) => {
+            <div className={cn(styles.secondLevelMenu, {[styles.closed]: selectedCategory !== secondMenu.id})}>
+                {menu.map((item) => {
                         return <div className={cn(styles.secondLevelMenuItem)}>
-                            <span>{item._id.secondCategory}</span>
+                            <span
+                                onClick={() => setSecondLevelMenu(item._id.secondCategory)} className={(cn({[styles.active]: item.isOpened}))}>{item._id.secondCategory}</span>
                             <div
-                                className={cn({[styles.closed]: !item.isOpened})}>{buildThirdLevel(item.pages, menu.route)}</div>
+                                className={cn({[styles.closed]: !item.isOpened})}>{buildThirdLevel(item.pages, secondMenu.route)}</div>
                         </div>;
                     }
                 )}
@@ -43,7 +61,7 @@ const Sidebar = ({data, firstLevelMenu, selectedCategory}: SidebarProps) => {
         return (
             <div className={cn(styles.thirdLevelMenu)}>
                 {pages.map((page) => {
-                    return <a href={`/${route}/${page.alias}`}>{page.title}</a>;
+                    return <><Link href={`/product/${route}/${page.alias}`}>{page.alias}</Link><br/></>;
                 })}
             </div>
         );

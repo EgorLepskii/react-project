@@ -1,32 +1,21 @@
-* {
-	box-sizing: border-box;
-	margin: 0;
-	padding: 0;
-}
-
-html,
-body {
-	overflow-x: hidden;
-
-	max-width: 100vw;
-
-	color: var(--black);
-	background: #F5F6F8;
-
-	font-family: var(--noto-sans-font);
-}
-
-a {
-	text-decoration: none;
-
-	color: inherit;
-}
-
 :root {
-	--black: #3B434E;
-	--white: white;
+	--grey-700: #3B434E;
+	--white: #FFF;
+	--white-100: #F5F6F8;
+	--dark-white: #EBEBEB;
 	--primary: #7653FC;
-	--red: #FC836D;
+	--red-100: #FC836D;
+	--red-900: red;
 	--green: #1DC37E;
 	--green-light: #C8F8E4;
+	--grey: #6E6E6E;
+	--dark-gray: #3B434E;
+	--blue: #1473E6;
+	--grey-100: #F5F5F5;
+	--grey-250:#B3C0D9;
+	--grey-200: #E5F4FF;
+	--grey-850: #303030;
+	--grey-800: #4B4B4B;
+	--grey-900: #2C2C2C;
+	--black: #000;
 }

@@ -1,4 +1,4 @@
 export interface ReadProps {
     text: string,
-    link: string
+    id: number
 }

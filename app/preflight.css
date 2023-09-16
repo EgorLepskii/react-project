@@ -1,0 +1,23 @@
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+html,
+body {
+	overflow-x: hidden;
+
+	max-width: 100vw;
+
+	color: var(--grey-700);
+	background: var(--white-100);
+
+	font-family: var(--noto-sans-font);
+}
+
+a {
+	text-decoration: none;
+
+	color: inherit;
+}

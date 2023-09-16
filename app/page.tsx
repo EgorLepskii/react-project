@@ -6,5 +6,5 @@ export default async function Home() {
         <main className={styles.main}>
             Main
         </main>
-    );
+    )
 }

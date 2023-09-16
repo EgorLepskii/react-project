@@ -1,4 +1,3 @@
-import React from 'react';
 import Card from "@/components/Card/Card";
 import styles from './Page.module.css';
 import cn from "classnames";
@@ -22,11 +21,11 @@ const Page = async () => {
                              timeToRead='1 месяц назад'
                              tag='Front-End'
                              imageLink='/icons/mini.png'
-                             link={''}
-                />;
-            })}
+                             postId={post.id}/>;
+            })
+            }
         </div>
-    );
-};
+    )
+}
 
 export default Page;

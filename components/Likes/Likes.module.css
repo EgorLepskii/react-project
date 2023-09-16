@@ -1,7 +1,9 @@
 .likes {
 	display: flex;
 
-	color: #6E6E6E;
+	color: var(--grey);
+	border: none;
+	background: none;
 
 	font-size: 12px;
 	font-weight: 400;
@@ -10,11 +12,6 @@
 }
 
 .likes span {
-	margin-right: 6px;
 	margin-top: 2px;
-}
-
-.btn {
-	border: none;
-	background: none;
+	margin-right: 6px;
 }

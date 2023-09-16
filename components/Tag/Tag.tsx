@@ -1,26 +1,28 @@
-import React from 'react';
 import {TagProps} from "@/components/Tag/Tag.props";
 import styles from './Tag.module.css';
 import cn from "classnames";
+import Link from "next/link";
 
-const Tag = ({appear = 'ghost', size, children, className, href, ...props}: TagProps) => {
+const Tag = ({appear = 'ghost', size, children, href, ...props}: TagProps) => {
+    const classes = cn(styles.tag,
+        {
+            [styles.ghost]: appear === 'ghost',
+            [styles.red]: appear === 'red',
+            [styles.primary]: appear === 'primary',
+            [styles.green]: appear === 'green',
+            [styles.m]: size === 'm',
+            [styles.s]: size === 's',
+        });
+
     return (
 
-        <a
+        <Link
             {...props}
-            href={href}
-            className={cn(styles.tag, className,
-                {
-                    [styles.ghost]: appear === 'ghost',
-                    [styles.red]: appear === 'red',
-                    [styles.primary]: appear === 'primary',
-                    [styles.green]: appear === 'green',
-                    [styles.m]: size === 'm',
-                    [styles.s]: size === 's',
-                })}
+            href={href ?? ''}
+            className={classes}
         >
             {children}
-        </a>
+        </Link>
     );
 };
 

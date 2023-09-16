@@ -1,12 +1,15 @@
 .button {
-	flex-shrink: 0;
+	display: flex;
+	align-items: center;
 
-	width: 148px;
+	min-width: 148px;
 	height: 35px;
 
 	cursor: pointer;
 	text-align: center;
 	letter-spacing: 0;
+
+	border: none;
 
 	border-radius: 5px;
 
@@ -15,33 +18,14 @@
 	line-height: 19px;
 }
 
-.primary {
-	color: #FFF;
-	border: none;
-	background: var(--primary);
+.text{
+	flex: 1;
+
+	margin-left: 18px;
+
+	text-align: center;
 }
 
-.primary svg {
-	fill: var(--white);
-}
-
-.ghost {
-	color: var(--black);
-	border: 1px solid #EBEBEB;
-	background: var(--white);
-}
-
-.arrow {
-	display: inline-block;
-
-	margin-left: 11px;
-}
-
-.right{
-
-}
-
-.down {
-	transition: all 0.2s;
-	transform: rotate(90deg);
+.icon {
+	margin-right: 18px;
 }

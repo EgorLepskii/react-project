@@ -1,13 +1,13 @@
-import React from "react";
+import styles from './layout.module.css';
+import cn from "classnames";
 
-export default function AuthLayout({
-                                       children,
-                                   }: {
-    children: React.ReactNode
-}) {
+interface Props {
+    children:  React.ReactNode
+}
+export default function AuthLayout({children}: Props) {
     return (
-        <div style={{border: "1px solid red"}}>
-            <p>site layout</p>
+        <div className={cn(styles.layout)}>
+            <span>site layout</span>
             {children}
         </div>
     );

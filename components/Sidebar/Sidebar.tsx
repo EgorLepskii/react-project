@@ -4,12 +4,9 @@ import {FirstLevelMenu, Page} from "@/interfaces/menu.interface";
 import cn from "classnames";
 import styles from "./Sidebar.module.css";
 import Link from "next/link";
-import {usePathname} from 'next/navigation';
 import {useState} from "react";
 
 const Sidebar = ({data, firstLevelMenu, selectedCategory}: SidebarProps) => {
-    const pathname = usePathname();
-    const path = pathname.split('/').pop();
     const [menu, setMenu] = useState(data);
 
     const setSecondLevelMenu = (secondCategory: string) => {
@@ -30,7 +27,7 @@ const Sidebar = ({data, firstLevelMenu, selectedCategory}: SidebarProps) => {
                     const isActive = selectedCategory === menu.id;
                     return <div className={cn(styles.firstLevelMenuItem, {[styles.active]: isActive})}>
                         <span>{menu.icon}</span>
-                        <Link href={`/product/${menu.route}`}
+                        <Link href={`/courses/${menu.route}`}
                               className={cn(styles.menuHeaderText, {[styles.active]: isActive})}>{menu.title}</Link>
                         <div>
                             {buildSecondLevel(menu)}
@@ -61,7 +58,7 @@ const Sidebar = ({data, firstLevelMenu, selectedCategory}: SidebarProps) => {
         return (
             <div className={cn(styles.thirdLevelMenu)}>
                 {pages.map((page) => {
-                    return <><Link href={`/product/${route}/${page.alias}`}>{page.alias}</Link><br/></>;
+                    return <><Link href={`/courses/${route}/${page.alias}`}>{page.alias}</Link><br/></>;
                 })}
             </div>
         );
@@ -72,7 +69,7 @@ const Sidebar = ({data, firstLevelMenu, selectedCategory}: SidebarProps) => {
         <div className={cn(styles.menu)}>
             {buildFirstLevel()}
         </div>
-    )
+    );
 };
 
 export default Sidebar;

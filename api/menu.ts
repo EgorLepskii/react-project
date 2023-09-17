@@ -3,12 +3,11 @@ import {API} from "@/app/api";
 
 export async function getMenu(firstCategory: number): Promise<PageItem[]> {
     const res = await fetch(API.topPage.find, {
-        method: 'POST',
+        method: 'POST',mode: 'no-cors',
         body: JSON.stringify({
             firstCategory
         }),
-        headers: new Headers({'content-type': 'application/json'})
+        headers: {'Content-type': 'application/json'}
     });
-    console.log("get menu");
     return res.json();
 }

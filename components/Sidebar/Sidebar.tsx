@@ -27,7 +27,7 @@ const Sidebar = ({data, firstLevelMenu, selectedCategory}: SidebarProps) => {
                     const isActive = selectedCategory === menu.id;
                     return <div className={cn(styles.firstLevelMenuItem, {[styles.active]: isActive})}>
                         <span>{menu.icon}</span>
-                        <Link href={`/courses/${menu.route}`}
+                        <Link href={`/${menu.route}`}
                               className={cn(styles.menuHeaderText, {[styles.active]: isActive})}>{menu.title}</Link>
                         <div>
                             {buildSecondLevel(menu)}
@@ -58,7 +58,7 @@ const Sidebar = ({data, firstLevelMenu, selectedCategory}: SidebarProps) => {
         return (
             <div className={cn(styles.thirdLevelMenu)}>
                 {pages.map((page) => {
-                    return <><Link href={`/courses/${route}/${page.alias}`}>{page.alias}</Link><br/></>;
+                    return <><Link href={`/${route}/${page.alias}`}>{page.alias}</Link><br/></>;
                 })}
             </div>
         );

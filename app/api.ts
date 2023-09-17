@@ -1,9 +1,9 @@
 export const API = {
     posts: {
-        all: process.env.NEXT_PUBLIC_DOMAIN + '/posts'
+        all: 'https://courses-top.ru' + '/posts'
     },
     topPage: {
-        find: process.env.NEXT_PUBLIC_DOMAIN + '/api/top-page/find',
-        byAlias: process.env.NEXT_PUBLIC_DOMAIN + '/api/top-page/byAlias',
+        find: 'https://courses-top.ru' + '/api/top-page/find',
+        byAlias: 'https://courses-top.ru' + '/api/top-page/byAlias',
     }
 };

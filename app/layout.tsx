@@ -22,7 +22,7 @@ export default function RootLayout({children}: Props) {
     return (
         <AppContextProvider link={'https://github.com/EgorLepskii/react-project'}>
             <html lang="ru">
-            <body className={notoSans.className}>
+            <body className={notoSans.variable}>
             <Header/>
             {children}
             <Footer/>

@@ -1,9 +1,11 @@
+import * as process from "process";
+
 export const API = {
     posts: {
-        all: 'https://courses-top.ru' + '/posts'
+        all: process.env.NEXT_PUBLIC_DOMAIN + '/posts'
     },
     topPage: {
-        find: 'https://courses-top.ru' + '/api/top-page/find',
-        byAlias: 'https://courses-top.ru' + '/api/top-page/byAlias',
+        find:  process.env.NEXT_PUBLIC_DOMAIN+ '/api/top-page/find',
+        byAlias: process.env.NEXT_PUBLIC_DOMAIN + '/api/top-page/byAlias',
     }
 };

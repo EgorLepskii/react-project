@@ -33,11 +33,11 @@
 .secondLevelMenu {
     font-size: 12px;
     font-weight: 300;
-    color: #787D85;
+    color: var(--grey-750);
     padding: 5px;
     margin-top: 10px;
     margin-left: 20px;
-    border-left: 1px solid #DFDFDF;
+    border-left: 1px solid var(--grey-150);
 }
 
 .secondLevelMenuItem {
@@ -46,7 +46,7 @@
 }
 
 .thirdLevelMenu {
-    color: #787D85;
+    color: var(--grey-760);
     font-size: 14px;
     font-weight: 500;
 

@@ -1,7 +1,5 @@
-import {FirstLevelMenu, PageItem} from "@/interfaces/menu.interface";
+import {FirstLevelMenuData} from "@/components/Menu/Menu";
 
 export interface SidebarProps {
-    data: PageItem[],
-    firstLevelMenu: FirstLevelMenu[],
-    selectedCategory: number
+    data: FirstLevelMenuData[]
 }

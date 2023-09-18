@@ -1,36 +1,84 @@
 "use client";
 import {SidebarProps} from "@/components/Sidebar/Sidebar.props";
-import {FirstLevelMenu, Page} from "@/interfaces/menu.interface";
+import {Page, PageItem} from "@/interfaces/menu.interface";
 import cn from "classnames";
 import styles from "./Sidebar.module.css";
 import Link from "next/link";
-import {useState} from "react";
+import {useEffect, useState} from "react";
+import {usePathname} from "next/navigation";
+import {firstLevelMenu} from "@/helpers/helpers";
 
-const Sidebar = ({data, firstLevelMenu, selectedCategory}: SidebarProps) => {
-    const [menu, setMenu] = useState(data);
+const Sidebar = ({data}: SidebarProps) => {
+    const [menu, setMenu] = useState(data[0]);
+    const [secondLevelMenu, setSecondLevelMenu] = useState<PageItem[] | undefined>(data[0].item);
+    const pathname = usePathname();
+    const firstLevelPath = pathname.split('/')[1];
+    const secondLevelPath = pathname.split('/')[2];
 
-    const setSecondLevelMenu = (secondCategory: string) => {
-        setMenu(menu.map((datum) => {
+    /**
+     * Set second level menu when load page
+     */
+    useEffect(() => {
+        menu.item.forEach((pageItem) => {
+            pageItem.pages.forEach((page) => {
+                if (page.alias === secondLevelPath) {
+                    pageItem.isOpened = true;
+                }
+            });
+        });
+        setSecondLevelMenu([...menu.item]);
+    }, []);
+
+    /**
+     * Set second level menu when click to second level menu id
+     *
+     * @param secondCategory
+     */
+    const handleSecondLevelMenu = (secondCategory: string) => {
+        const pageItems: PageItem[] = menu.item;
+        setSecondLevelMenu(pageItems.map((datum: PageItem) => {
             if (datum._id.secondCategory === secondCategory) {
                 datum.isOpened = !datum.isOpened;
-            } else  {
-                datum.isOpened = false;
             }
             return datum;
         }));
     };
 
+    /**
+     * Handle first level menu click
+     *
+     * @param route
+     */
+    const handleFirstLevelMenu = (route: string) => {
+        const item = data.find((item) => item.route === route);
+        if (item) {
+            setMenu(item);
+            setSecondLevelMenu(item.item);
+        }
+    };
+
     const buildFirstLevel = () => {
         return (
             <div className={cn(styles.firstLevelMenu)}>
-                {firstLevelMenu.map((menu) => {
-                    const isActive = selectedCategory === menu.id;
-                    return <div className={cn(styles.firstLevelMenuItem, {[styles.active]: isActive})}>
-                        <span>{menu.icon}</span>
-                        <Link href={`/${menu.route}`}
-                              className={cn(styles.menuHeaderText, {[styles.active]: isActive})}>{menu.title}</Link>
-                        <div>
-                            {buildSecondLevel(menu)}
+                {firstLevelMenu.map((first) => {
+                    const isActive = firstLevelPath === first.route;
+                    return <div>
+                        <span>{first.icon}</span>
+                        <Link href={`/${first.route}`}
+                              className={
+                                  cn(styles.menuHeaderText,
+                                      {
+                                          [styles.active]: isActive
+                                      }
+                                  )
+                              }
+                              onClick={() => handleFirstLevelMenu(first.route)}
+                        >
+                            {first.title}
+                        </Link>
+
+                        <div className={cn({[styles.closed]: !isActive})}>
+                            {buildSecondLevel()}
                         </div>
                     </div>;
                 })}
@@ -38,15 +86,18 @@ const Sidebar = ({data, firstLevelMenu, selectedCategory}: SidebarProps) => {
         );
     };
 
-    const buildSecondLevel = (secondMenu: FirstLevelMenu) => {
+    const buildSecondLevel = () => {
         return (
-            <div className={cn(styles.secondLevelMenu, {[styles.closed]: selectedCategory !== secondMenu.id})}>
-                {menu.map((item) => {
-                        return <div className={cn(styles.secondLevelMenuItem)}>
+            <div>
+                {secondLevelMenu && secondLevelMenu.map((item) => {
+                        return <div>
                             <span
-                                onClick={() => setSecondLevelMenu(item._id.secondCategory)} className={(cn({[styles.active]: item.isOpened}))}>{item._id.secondCategory}</span>
-                            <div
-                                className={cn({[styles.closed]: !item.isOpened})}>{buildThirdLevel(item.pages, secondMenu.route)}</div>
+                                onClick={() => handleSecondLevelMenu(item._id.secondCategory)}
+                                className={cn({[styles.active]: item.isOpened})}
+                            >
+                                {item._id.secondCategory}
+                            </span>
+                            {item.isOpened && buildThirdLevel(item.pages, menu.route)}
                         </div>;
                     }
                 )}
@@ -58,7 +109,19 @@ const Sidebar = ({data, firstLevelMenu, selectedCategory}: SidebarProps) => {
         return (
             <div className={cn(styles.thirdLevelMenu)}>
                 {pages.map((page) => {
-                    return <><Link href={`/${route}/${page.alias}`}>{page.alias}</Link><br/></>;
+                    return <>
+                        <Link
+                            href={`/${route}/${page.alias}`}
+                            className={cn(
+                                {
+                                    [styles.active]: page.alias === secondLevelPath
+                                }
+                            )
+                            }>
+                            {page.alias}
+                        </Link>
+                        <br/>
+                    </>;
                 })}
             </div>
         );

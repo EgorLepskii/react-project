@@ -1,4 +1,3 @@
-import React from 'react';
 import {getMenu} from "@/api/menu";
 import {firstLevelMenu} from "@/helpers/helpers";
 

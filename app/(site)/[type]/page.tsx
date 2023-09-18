@@ -1,6 +1,4 @@
-import React from 'react';
 import {firstLevelMenu} from "@/helpers/helpers";
-
 
 export async function generateStaticParams() {
     const routes: {type: string}[] = [];

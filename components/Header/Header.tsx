@@ -1,5 +1,5 @@
 'use client';
-import React, {useContext} from 'react';
+import {useContext} from 'react';
 import {HeaderProps} from "@/components/Header/Header.props";
 import styles from './Header.module.css';
 import cn from "classnames";

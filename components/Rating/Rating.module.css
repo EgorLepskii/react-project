@@ -1,0 +1,16 @@
+.rating {
+	display: flex;
+
+	margin-left: 5px;
+
+	cursor: pointer;
+}
+
+.active svg{
+	fill: var(--primary);
+}
+
+.rating button {
+	border: none;
+	background: none;
+}

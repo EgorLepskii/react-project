@@ -1,9 +1,10 @@
+'use client';
 import './globals.css';
 import './preflight.css';
-import type {Metadata} from 'next';
 import {Noto_Sans,} from 'next/font/google';
 import Header from "@/components/Header/Header";
 import Footer from "@/components/Footer/Footer";
+import {AppContextProvider} from "@/context/app.context";
 
 const notoSans = Noto_Sans({
     weight: ['400', '500', '700'],
@@ -13,22 +14,20 @@ const notoSans = Noto_Sans({
     variable: '--noto-sans-font'
 });
 
-export const metadata: Metadata = {
-    title: 'Мой блог'
-};
-
 interface Props {
     children: React.ReactNode
 }
 
 export default function RootLayout({children}: Props) {
     return (
-        <html lang="ru">
-          <body className={notoSans.variable}>
+        <AppContextProvider link={'https://github.com/EgorLepskii/react-project'}>
+            <html lang="ru">
+            <body className={notoSans.variable}>
             <Header/>
             {children}
             <Footer/>
-          </body>
-        </html>
+            </body>
+            </html>
+        </AppContextProvider>
     );
 }

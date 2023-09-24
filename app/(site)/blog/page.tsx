@@ -1,24 +1,29 @@
 import Card from "@/components/Card/Card";
 import styles from './Page.module.css';
 import cn from "classnames";
-import posts from './posts.json';
+import {getPosts} from "@/api/post";
+import {notFound} from "next/navigation";
 
-const Page = () => {
+const Page = async () => {
+    const posts = await getPosts();
+
+    if (!posts) {
+        notFound();
+    }
 
     return (
         <div className={cn(styles.page)}>
             {posts.map((post) => {
-                return <Card header={post.header}
-                             description={post.description}
-                             likes={post.likes}
-                             time={post.time}
-                             timeToRead={post.timeToRead}
-                             tag={post.tag}
-                             imageLink={post.imageLink}
-                             link={post.link}
-                             postId={post.postId}
-                />;
-            })}
+                return <Card header={post.title}
+                             description={post.body}
+                             likes={4}
+                             time='3 минуты'
+                             timeToRead='1 месяц назад'
+                             tag='Front-End'
+                             imageLink='/icons/mini.png'
+                             postId={post.id}/>;
+            })
+            }
         </div>
     );
 };

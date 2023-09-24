@@ -1,4 +1,4 @@
-import {AnchorHTMLAttributes, DetailedHTMLProps, ReactNode, RefAttributes} from "react";
+import {ReactNode, RefAttributes} from "react";
 
 export interface TagProps extends RefAttributes<HTMLAnchorElement> {
     appear?: 'red' | 'ghost' | 'primary' | 'green',

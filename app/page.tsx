@@ -1,10 +1,10 @@
+'use client';
 import styles from './page.module.css';
-import LikeCountButton from "@/components/Likes/LikeCountButton";
 
-export default function Home() {
+export default async function Home() {
     return (
         <main className={styles.main}>
-            <LikeCountButton count={4}/>
+            Main
         </main>
     );
 }

@@ -1,4 +1,4 @@
-import {DetailedHTMLProps, HTMLAttributes, ReactNode} from "react";
+import {DetailedHTMLProps, HTMLAttributes} from "react";
 
 export interface CardProps extends DetailedHTMLProps<HTMLAttributes<HTMLElement>, HTMLElement>{
     header: string,
@@ -8,7 +8,6 @@ export interface CardProps extends DetailedHTMLProps<HTMLAttributes<HTMLElement>
     likes: number,
     tag: string,
     imageLink: string,
-    link: string
-    postId: number
+    postId: number,
     className?: string
 }

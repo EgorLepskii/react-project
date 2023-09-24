@@ -1,0 +1,34 @@
+.closed {
+	display: none;
+}
+
+.active {
+	color: var(--primary);
+}
+
+.active svg {
+	fill: var(--primary);
+}
+
+.menu {
+	font-style: normal;
+	line-height: normal;
+}
+
+.firstLevelMenu {
+	font-size: 18px;
+
+	font-weight: 500;
+}
+
+.menuHeaderText {
+	margin-left: 10px;
+}
+
+.thirdLevelMenu {
+	color: var(--grey-760);
+
+	font-size: 14px;
+	font-weight: 500;
+
+}
